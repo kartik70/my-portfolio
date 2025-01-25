@@ -34,8 +34,7 @@ interface Experience {
             </div>
             
             <div class="relative p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:scale-105"
-                 [class.ml-12]="i % 2 === 0"
-                 [class.mr-12]="i % 2 === 1">
+                 >
               <div class="flex items-center mb-4">
                 <img [src]="exp.logo" [alt]="exp.company" class="w-16 h-16 rounded-lg mr-4 object-contain">
                 <div>
