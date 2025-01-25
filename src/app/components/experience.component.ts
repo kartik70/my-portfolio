@@ -70,11 +70,21 @@ export class ExperienceComponent {
       role: 'Senior Angular Developer',
       period: '2021 - Present',
       description: [
-        'Led development of mission-critical CRM modules serving 100K+ users',
-        'Architected cloud-native solutions using GCP & AWS',
-        'Mentored junior developers and drove technical initiatives'
+        'Developed a Unified Communication Hub (CRM) providing omnichannel support 📞.',
+        'Designed and implemented a core designer component for template and layout creation ✍️.',
+        'Architected a TypeScript-based library to simplify dynamic UI rendering 🛠️.',
+        'Streamlined event-driven architecture for seamless integration of component events 🔄.',
+        'Upgraded the application from Angular 15 to Angular 18 for enhanced performance and compatibility 🚀.'
       ],
-      techStack: ['⚡ Angular', '📝 TypeScript', '☁️ GCP', '🌩️ AWS', '🐳 Docker'],
+      techStack: ['Angular (15-18) 🅰️',
+        'TypeScript ⌨️',
+        'JavaScript (ES6+) 🟨',
+        'HTML5 & CSS3 🎨',
+        'RxJS for reactive programming 🔄',
+        'Material for advanced UI components 🖥️',
+        'Bootstrap for responsive design 📱',
+        'Custom TypeScript library development 🛠️',
+        'Git for version control 🔧'],
       logo: 'https://companieslogo.com/img/orig/TCS.NS-7401f1bd.png?t=1720244494',
       emoji: '👨‍💻'
     },
@@ -87,7 +97,15 @@ export class ExperienceComponent {
         'Implemented responsive dashboards and data visualizations',
         'Reduced load time by 40% through optimization'
       ],
-      techStack: ['⚡ Angular', '🔄 RxJS', '📊 D3.js', '🟢 Node.js'],
+      techStack: ['Angular (15) 🅰️',
+        'TypeScript ⌨️',
+        'JavaScript (ES6+) 🟨',
+        'HTML5 & CSS3 🎨',
+        'RxJS for reactive programming 🔄',
+        'PrimeNG for UI components 🖥️',
+        'Bootstrap for responsive design 📱',
+        'REST APIs integration 🌐',
+        'Git for version control 🔧'],
       logo: 'https://companieslogo.com/img/orig/TCS.NS-7401f1bd.png?t=1720244494',
       emoji: '🚀'
     }

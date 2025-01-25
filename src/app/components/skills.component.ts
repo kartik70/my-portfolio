@@ -59,15 +59,26 @@ export class SkillsComponent implements OnInit {
   skills: Skill[] = [
     { name: 'Angular', level: 95, category: 'Frontend', emoji: '⚡' },
     { name: 'TypeScript', level: 90, category: 'Frontend', emoji: '📝' },
-    { name: 'RxJS', level: 85, category: 'Frontend', emoji: '🔄' },
+    { name: 'JavaScript', level: 90, category: 'Frontend', emoji: '⚙️' },
+    { name: 'HTML', level: 85, category: 'Frontend', emoji: '📄' },
+    { name: 'CSS', level: 80, category: 'Frontend', emoji: '🎨' },
+    { name: 'RxJS', level: 85, category: 'Tools', emoji: '🔄' },
+    { name: 'PrimeNG', level: 90, category: 'UI Frameworks', emoji: '✨' },
+    { name: 'Angular Material', level: 85, category: 'UI Frameworks', emoji: '📐' },
+    { name: 'Tailwind CSS', level: 80, category: 'UI Frameworks', emoji: '💎' },
+    { name: 'Bootstrap', level: 85, category: 'UI Frameworks', emoji: '📏' },
+    { name: 'Chart.js', level: 75, category: 'Tools', emoji: '📊' },
     { name: 'GCP', level: 80, category: 'Cloud', emoji: '☁️' },
     { name: 'AWS', level: 75, category: 'Cloud', emoji: '🌩️' },
-    { name: 'Docker', level: 85, category: 'Tools', emoji: '🐳' },
     { name: 'Git', level: 90, category: 'Tools', emoji: '📦' },
-    { name: 'CI/CD', level: 85, category: 'Tools', emoji: '🔄' }
+    { name: 'CI/CD', level: 85, category: 'Tools', emoji: '🔄' },
+    { name: 'Dependency Injection', level: 80, category: 'Advanced Concepts', emoji: '🔗' },
+    { name: 'Signals', level: 75, category: 'Advanced Concepts', emoji: '📶' },
+    { name: 'NgRx', level: 85, category: 'Advanced Concepts', emoji: '🌊' },
+    { name: 'Dynamic Rendering Libraries', level: 70, category: 'Advanced Concepts', emoji: '📚' }
   ];
 
-  categories = ['All', 'Frontend', 'Cloud', 'Tools'];
+  categories = ['All', 'Frontend', 'UI Frameworks', 'Advanced Concepts', 'Tools', 'Cloud',];
   selectedCategory = 'All';
 
   ngOnInit() {
@@ -111,9 +122,12 @@ export class SkillsComponent implements OnInit {
   getCategoryEmoji(category: string): string {
     switch (category) {
       case 'All': return '🌟';
-      case 'Frontend': return '🎨';
+      case 'Frontend': return '🌐';
+      case 'UI Frameworks': return '📦';
+      case 'Charting Tools': return '📊';
       case 'Cloud': return '☁️';
       case 'Tools': return '🛠️';
+      case 'Advanced Concepts': return '🔬';
       default: return '📌';
     }
   }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SOCIAL_LINKS } from '../shared/constants/app.constants';
 
 declare const Typed: any;
 
@@ -24,10 +25,10 @@ declare const Typed: any;
           </div>
           
           <div class="flex items-center space-x-6">
-            <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+            <a [href]="gitHubUrl" target="_blank" class="social-icon">
               <i class="fab fa-github text-xl"></i>
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon">
+            <a [href]="linkedInUrl" target="_blank" class="social-icon">
               <i class="fab fa-linkedin text-xl"></i>
             </a>
             <a href="https://twitter.com/yourusername" target="_blank" class="social-icon">
@@ -46,6 +47,8 @@ declare const Typed: any;
   `
 })
 export class HeaderComponent implements OnInit {
+  linkedInUrl = SOCIAL_LINKS.LINKEDIN;
+  gitHubUrl = SOCIAL_LINKS.GITHUB;
   isDark = false;
 
   ngOnInit() {

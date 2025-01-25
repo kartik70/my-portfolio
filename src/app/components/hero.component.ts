@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { gsap } from 'gsap';
+import { SOCIAL_LINKS } from '../shared/constants/app.constants';
 
 declare const particlesJS: any; // Declare the global particlesJS function
 
@@ -23,7 +24,7 @@ declare const particlesJS: any; // Declare the global particlesJS function
             <span class="relative z-10">📄 Download Resume</span>
             <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </a>
-          <a href="https://www.linkedin.com/in/kartik-kakad" target="_blank" style="opacity:unset" class="btn-secondary group relative overflow-hidden inline-block">
+          <a [href]="linkedInUrl" target="_blank" style="opacity:unset" class="btn-secondary group relative overflow-hidden inline-block">
             <span class="relative z-10">🔗 Let's Connect</span>
             <div class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-400 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
           </a>
@@ -33,6 +34,7 @@ declare const particlesJS: any; // Declare the global particlesJS function
   `
 })
 export class HeroComponent implements OnInit {
+  linkedInUrl = SOCIAL_LINKS.LINKEDIN;
   ngOnInit() {
     this.initParticles();
     this.initAnimations();
