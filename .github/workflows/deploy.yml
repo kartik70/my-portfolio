@@ -32,5 +32,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages         # The branch the action should deploy to
-          folder: dist/demo/browser # 👈 update if your dist folder name differs
+          branch: gh-pages                  # deploy branch
+          folder: dist/demo/browser       # build output folder
+          clean: true                        # ⚡ ensures temp folder is cleared
+          token: ${{ secrets.GITHUB_TOKEN }} # uses GitHub Actions token
