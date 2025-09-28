@@ -13,9 +13,10 @@ interface Skill {
   standalone: true,
   imports: [CommonModule],
   template: `
+  // Skills Section
     <section class="section-container">
       <h2 class="text-3xl font-bold mb-8 text-center">
-        Technical Skills 🚀
+        Technical Skills  testttttt🚀
       </h2>
       
       <div class="flex justify-center mb-8 space-x-4">
