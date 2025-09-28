@@ -3,36 +3,29 @@ name: Deploy Angular App to GitHub Pages
 on:
   push:
     branches:
-      - my-portfolio_DEV
+      - main   # or your default branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # 2. Setup Node.js
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      # 3. Install dependencies
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm ci
 
-      # 4. Build Angular app
-      - name: Build Angular App
+      - name: Build Angular app
         run: npm run build -- --configuration production --base-href "/my-portfolio/"
 
-      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@5.0.0
         with:
-          branch: gh-pages                  # deploy branch
-          folder: dist/demo/browser       # build output folder
-          clean: true                        # ⚡ ensures temp folder is cleared
-          token: ${{ secrets.GITHUB_TOKEN }} # uses GitHub Actions token
+          branch: gh-pages
+          folder: dist/demo/browser
